@@ -1,0 +1,92 @@
+.service {
+	text-align: center;
+	&__subtitle {
+		color: $col-4;
+		text-transform: uppercase;
+	}
+	&__title {
+		position: relative;
+		margin: 0;
+		padding: 0 0 20px 0;
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translate(-50%);
+			width: 97px;
+			height: 2px;
+			background: $col-4;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 30px;
+		padding: 30px 36px;
+		width: 407px;
+		height: 380px;
+		background: transparent url('../img/services/tel.svg') center no-repeat;
+		border: 1px solid $col-6;
+		box-sizing: border-box;
+	}
+	&__img-contaier {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 0 0 50%;
+	}
+	&__img {margin: 10px 0;}
+	&__description {
+		flex: 0 0 50%;
+		margin: 0 auto;
+		width: 100%;
+	}
+	&__item-title {
+		font-size: $fz-regular;
+		color: $col-1;
+		text-transform: uppercase;
+	}
+	&__text {
+		color: $col-3;
+		font-weight: $fw_extra-light;
+	}
+}
+.service-box {
+	position: relative;
+	padding: 60px 0;
+}
+.service-dots {
+	&__top {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 2;
+	}
+	&__bottom {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		transform: translate(0, 65%);
+		z-index: 2;
+	}
+}
+.service-headers {}
+.service-services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 50px 0 0 0;
+}
+@media screen and (max-width: 1000px) {
+	.service__item {max-width: 300px;}
+}
+@media screen and (max-width: 828px) {
+	.service__title {font-size: $fz-regular;}
+	.service-dots {
+		&__top, &__bottom {display: none;}
+	}
+}

@@ -1,0 +1,46 @@
+.message {
+	position: relative;
+	padding: 0 0 440px 0;
+	background:transparent url('../img/timetomessage/bg.jpg') center 0 / cover no-repeat;
+	&__title {
+		position: relative;
+		padding: 0 0 20px 0;
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 252px;
+			height: 2px;
+			background: $col-4;
+		}
+	}
+	&__text {}
+	&__link {
+		display: inline-block;
+		margin: 16px 0;
+		color: $col-4;
+		font-size: $fz-regular;
+	}
+	&__message-pictures {
+		position: absolute;
+		left: 55%;
+		top: 10%;
+	}
+}
+.message-box {max-width: 730px;}
+@media screen and (max-width: 1200px) {
+	.message__message-pictures {display: none;}
+}
+@media screen and (max-width: 941px) {
+	.message {
+		&__title {
+			font-size: $fz-regular;
+			white-space: normal;
+		}
+		&__text {font-size: $fz-min;}
+		&__link {font-size: $fz-buttons;}
+	}
+	.message-box {max-width: 550px;}
+}

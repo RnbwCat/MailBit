@@ -1,0 +1,33 @@
+.home {
+	padding: 150px 0 302px 0;
+	background: url('../img/home/banner.png')center/ cover no-repeat;
+}
+.home-box {
+	max-width: 590px;
+	&__head-title {
+		margin: 0;
+		font-size: $fz-max;
+		color: $col-1;
+		white-space: nowrap;
+	}
+	&__text {
+		color: $col-2;
+		font-size: $fz-regular;
+		span {color: $col-4;}
+	}
+	&__btn {margin: 40px 0;}
+}
+@media screen and (max-width: 668px) {
+	.home-box {
+		&__head-title {font-size: $fz-title;}
+		&__text {font-size: $fz-min;}
+		&__btn {
+			width: 180px;
+			height: 40px;
+			font-size: $fz-min;
+		}
+	}
+}
+@media screen and (max-width: 410px) {
+	.home-box__head-title {font-size: $fz-regular;}
+}

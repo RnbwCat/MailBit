@@ -1,0 +1,92 @@
+//=== Обнуление стилей браузера ===
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+}
+body.lock {overflow: hidden;}
+a {text-decoration: none;}
+p {margin: 0;}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+input:focus {
+	outline: none;
+	background: #ffffff !important;
+}
+input:-webkit-autofill{
+	box-shadow:inset 0 0 0 100px #fff;
+}
+//=== /Обнуление стилей браузера ===
+
+//=== Подключение шрифтов ===
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+//=== /Подключение шрифтов ===
+
+//=== Переменные ===
+$fw_extra-light: 200;
+
+$col-1: #060402;
+$col-2: #929292;
+$col-3: #202020;
+$col-4: #ED1B24;
+$col-5: #ffffff;
+$col-6: #C4C4C4;
+
+$fz-min: 14px;
+$fz-max: 70px;
+$fz-title: 40px;
+$fz-regular: 24px;
+$fz-buttons: 18px;
+//=== /Переменные ===
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.btn {
+	width: 266px;
+	height: 60px;
+	padding: 0;
+	font-size: $fz-buttons;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 100px;
+	color: $col-5;
+	background: linear-gradient(177.93deg, #A91D1C 6.92%, #ED1B24 93.08%);
+	&:focus {
+		outline: none;
+	}
+}
+.title {
+	margin: 0;
+	font-size: $fz-title;
+	color: $col-1;
+	white-space: nowrap;
+}
+.text {
+	margin: 60px 0 0 0;
+	font-size: $fz-regular;
+	color: $col-1;
+	span {
+		color: $col-4;
+	}
+}
+//=== Шапка ===
+@import '_header.scss';
+//=== /Шапка ===
+
+//=== Основной контент ===
+@import '_home.scss';
+@import '_services.scss';
+@import '_message.scss';
+@import '_mms.scss';
+//=== /Основной контент ===
+@import '_modal.scss';
+//=== Подвал ===
+
+//=== /Подвал ===
